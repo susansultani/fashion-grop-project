@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury Gold Navbar</title>
+
+<!-- Bootstrap -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -16,11 +22,34 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#0f0f0f;
+height:200vh;
+
+}
+
+/*====================
+NAVBAR
+
+.glass-navbar{
+
+margin:30px auto;
+width:90%;
+border-radius:70px;
 
 <style>
     /*=========================
 FOOTER
-=========================*/
 
 .luxury-footer{
 
@@ -32,6 +61,177 @@ background:rgba(255,255,255,.05);
 
 backdrop-filter:blur(25px);
 
+border:1px solid rgba(212,175,55,.25);
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.5),
+
+0 0 25px rgba(212,175,55,.15);
+
+padding:15px 30px;
+
+transition:.4s;
+
+}
+
+.navbar.scrolled{
+
+background:rgba(0,0,0,.65);
+
+backdrop-filter:blur(35px);
+
+box-shadow:0 0 40px rgba(212,175,55,.25);
+
+}
+
+/*====================
+LOGO
+
+.logo{
+
+width:55px;
+height:55px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,#FFD700,#B8860B);
+
+box-shadow:
+
+0 0 15px #FFD700,
+
+0 0 35px rgba(255,215,0,.3);
+
+animation:pulse 3s infinite;
+
+transition:.4s;
+
+}
+
+.logo:hover{
+
+transform:rotate(15deg) scale(1.1);
+
+}
+
+@keyframes pulse{
+
+0%{box-shadow:0 0 10px gold;}
+
+50%{box-shadow:0 0 35px gold;}
+
+100%{box-shadow:0 0 10px gold;}
+
+}
+
+/*====================
+MENU
+
+.nav-link{
+
+color:white!important;
+
+font-size:18px;
+
+margin:0 18px;
+
+position:relative;
+
+transition:.4s;
+
+}
+
+.nav-link::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-8px;
+
+width:0;
+
+height:3px;
+
+background:#FFD700;
+
+transition:.4s;
+
+border-radius:10px;
+
+}
+
+.nav-link:hover{
+
+color:#FFD700!important;
+
+transform:translateY(-4px);
+
+text-shadow:0 0 10px gold;
+
+}
+
+.nav-link:hover::after{
+
+width:100%;
+
+}
+
+/*====================
+TOGGLE
+
+.navbar-toggler{
+
+border:none;
+
+color:#FFD700;
+
+font-size:28px;
+
+}
+
+.navbar-toggler:focus{
+
+box-shadow:none;
+
+}
+
+.bi-list{
+
+color:#FFD700;
+
+font-size:35px;
+
+transition:.4s;
+
+}
+
+.bi-list:hover{
+
+transform:rotate(90deg);
+
+text-shadow:0 0 15px gold;
+
+}
+
+/*====================
+BUTTON
+
+.btn-gold{
+
+border-radius:40px;
+
+padding:10px 25px;
+
+background:linear-gradient(135deg,#FFD700,#B8860B);
+
+color:#000;
+
+font-weight:600;
 border-top:1px solid rgba(212,175,55,.25);
 
 box-shadow:
@@ -190,6 +390,9 @@ transition:.4s;
 
 }
 
+.btn-gold:hover{
+
+transform:translateY(-3px);
 .social-icons a:hover{
 
 transform:translateY(-8px) scale(1.1);
@@ -199,6 +402,59 @@ background:#FFD700;
 color:#000;
 
 box-shadow:0 0 25px gold;
+
+}
+
+/*====================
+SHINE EFFECT
+
+.glass-navbar{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.glass-navbar::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:40%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.25),
+
+transparent);
+
+transform:skewX(-25deg);
+
+animation:shine 5s infinite;
+
+}
+
+@keyframes shine{
+
+100%{
+
+left:160%;
+
+}
 
 }
 
@@ -254,7 +510,83 @@ font-weight:600;
 </style>
 
 </head>
+
 <body>
+
+<nav class="navbar navbar-expand-lg fixed-top glass-navbar">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="#">
+<div class="logo"></div>
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<i class="bi bi-list"></i>
+
+</button>
+
+<div class="collapse navbar-collapse justify-content-center" id="menu">
+
+<ul class="navbar-nav">
+
+<li class="nav-item">
+
+<a class="nav-link active" href="#">Home</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="#">About</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="#">Services</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="#">Footer</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="d-none d-lg-block">
+
+<a href="#" class="btn btn-gold">
+Contact
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<script>
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector(".navbar");
+
+nav.classList.toggle("scrolled",window.scrollY>50);
+
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
 
 <!-- ================= Footer ================= -->
